@@ -197,6 +197,9 @@ nav {
 }
 
 header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   .borderRadius();
   color: @mainColor;
   width: 100%;
@@ -221,11 +224,12 @@ header {
     }
   }
   div {
+    width: 800px * 0.45;
     * {
       margin-top: 20px;
     }
     a {
-      .borderRadius();
+      border-radius: 50px;
       color: @lightColor;
       text-decoration: none;
       padding: 10px 30px;
