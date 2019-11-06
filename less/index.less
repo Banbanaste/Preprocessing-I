@@ -198,12 +198,21 @@ nav {
 
 header {
   .borderRadius();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   color: @mainColor;
   width: 100%;
   background-color: @subColor;
   padding: 30px;
   font-size: @mediumFont;
   div.contentCard {
+    @media (max-width: 840px) {
+      text-align: left;
+      margin: 0px;
+      width: 100%;
+    }
+    margin-right: 20px;
     .borderRadius();
     display: flex;
     align-items: flex-end;
@@ -211,16 +220,15 @@ header {
     background-color: @lightColor;
     padding: 15px 20px;
     h1 {
-      margin-left: 15px;
+      margin-left: 14px;
       font-size: @largeFont;
     }
     @media (max-width: 500px) {
       justify-content: center;
-      width: 100%;
-      text-align: left;
     }
   }
   div {
+    width: 350px;
     * {
       margin-top: 20px;
     }
@@ -236,6 +244,9 @@ header {
       &:hover {
         .hoverLink();
       }
+    }
+    @media (max-width: 840px) {
+      width: 100%;
     }
     @media (max-width: 500px) {
       text-align: center;
