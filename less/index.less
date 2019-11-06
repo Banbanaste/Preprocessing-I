@@ -137,17 +137,19 @@ table {
 html,
 body {
   height: 100%;
-  color: @mainColor;
+  color: @lightColor;
   font-family: "Nanum Gothic", sans-serif;
   font-size: @smallFont;
+  background-color: @popColor;
 }
 
 // fonts
 @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap");
 // var
 @mainColor: rgb(88, 85, 90);
-@subColor: rgb(224, 224, 224);
+@subColor: rgb(255, 255, 255);
 @lightColor: rgb(240, 240, 240);
+@popColor: #2f1893;
 @largeFont: 35px;
 @mediumFont: 20px;
 @smallFont: 15px;
@@ -196,6 +198,7 @@ nav {
 
 header {
   .borderRadius();
+  color: @mainColor;
   width: 100%;
   background-color: @subColor;
   padding: 30px;
@@ -218,12 +221,11 @@ header {
     }
     a {
       .borderRadius();
-      color: @mainColor;
+      color: @lightColor;
       text-decoration: none;
-      padding: 5px 20px;
-      font-size: @smallFont;
+      padding: 10px 30px;
       transition: @transition;
-      background-color: #fff;
+      background-color: @mainColor;
       display: inline-block;
       margin-top: 20px;
       &:hover {
@@ -251,7 +253,7 @@ table {
   }
   tr {
     &:nth-child(even) {
-      background-color: @lightColor;
+      background-color: @mainColor;
     }
   }
   th,
@@ -265,5 +267,4 @@ footer {
   margin-top: 30px;
   text-align: center;
   padding: 30px 0 40px;
-  background-color: @subColor;
 }
