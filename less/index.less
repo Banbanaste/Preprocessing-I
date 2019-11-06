@@ -137,4 +137,121 @@ table {
 html,
 body {
   height: 100%;
+  color: @mainColor;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: @smallFont;
+}
+
+// fonts
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap");
+// var
+@mainColor: rgb(88, 85, 90);
+@subColor: rgb(224, 224, 224);
+@lightColor: rgb(240, 240, 240);
+@largeFont: 35px;
+@mediumFont: 20px;
+@smallFont: 15px;
+@transition: ease-in-out 0.3s;
+// mixins
+.borderRadius() {
+  border-radius: 5px;
+}
+.hoverLink() {
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.container {
+  max-width: 840px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0;
+  a {
+    text-transform: uppercase;
+    color: @subColor;
+    text-decoration: none;
+    margin-left: 40px;
+    transition: @transition;
+
+    &:hover {
+      color: @mainColor;
+    }
+  }
+}
+
+header {
+  .borderRadius();
+  width: 100%;
+  background-color: @subColor;
+  padding: 30px;
+  font-size: @mediumFont;
+  div.contentCard {
+    .borderRadius();
+    display: flex;
+    align-items: flex-end;
+    width: fit-content;
+    background-color: @lightColor;
+    padding: 15px 20px;
+    h1 {
+      margin-left: 15px;
+      font-size: @largeFont;
+    }
+  }
+  div {
+    * {
+      margin-top: 20px;
+    }
+    button {
+      .borderRadius();
+      padding: 5px 20px;
+      font-size: @smallFont;
+      transition: @transition;
+      &:hover {
+        .hoverLink();
+      }
+    }
+  }
+}
+
+section {
+  margin-top: 30px;
+  width: 100%;
+  h2 {
+    font-size: @mediumFont;
+    margin-bottom: 20px;
+  }
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  th {
+    font-weight: 900;
+  }
+  tr {
+    &:nth-child(even) {
+      background-color: @lightColor;
+    }
+  }
+  th,
+  td {
+    border: 1px solid @subColor;
+    padding: 10px;
+  }
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  padding: 30px 0 40px;
+  background-color: @subColor;
 }
