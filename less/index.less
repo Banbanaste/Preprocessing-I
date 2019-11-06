@@ -214,6 +214,11 @@ header {
       margin-left: 15px;
       font-size: @largeFont;
     }
+    @media (max-width: 500px) {
+      justify-content: center;
+      width: 100%;
+      text-align: left;
+    }
   }
   div {
     * {
@@ -231,6 +236,9 @@ header {
       &:hover {
         .hoverLink();
       }
+    }
+    @media (max-width: 500px) {
+      text-align: center;
     }
   }
 }

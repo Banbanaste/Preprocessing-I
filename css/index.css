@@ -198,6 +198,13 @@ header div.contentCard h1 {
   margin-left: 15px;
   font-size: 35px;
 }
+@media (max-width: 500px) {
+  header div.contentCard {
+    justify-content: center;
+    width: 100%;
+    text-align: left;
+  }
+}
 header div * {
   margin-top: 20px;
 }
@@ -214,6 +221,11 @@ header div a {
 header div a:hover {
   cursor: pointer;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+@media (max-width: 500px) {
+  header div {
+    text-align: center;
+  }
 }
 section {
   margin-top: 30px;
