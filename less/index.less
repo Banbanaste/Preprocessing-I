@@ -209,11 +209,16 @@ header {
     * {
       margin-top: 20px;
     }
-    button {
+    a {
       .borderRadius();
+      color: @mainColor;
+      text-decoration: none;
       padding: 5px 20px;
       font-size: @smallFont;
       transition: @transition;
+      background-color: #fff;
+      display: inline-block;
+      margin-top: 20px;
       &:hover {
         .hoverLink();
       }

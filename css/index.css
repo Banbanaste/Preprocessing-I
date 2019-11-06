@@ -189,13 +189,18 @@ header div.contentCard h1 {
 header div * {
   margin-top: 20px;
 }
-header div button {
+header div a {
   border-radius: 5px;
+  color: #58555a;
+  text-decoration: none;
   padding: 5px 20px;
   font-size: 15px;
   transition: ease-in-out 0.3s;
+  background-color: #fff;
+  display: inline-block;
+  margin-top: 20px;
 }
-header div button:hover {
+header div a:hover {
   cursor: pointer;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
